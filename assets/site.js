@@ -14,13 +14,6 @@
   function pronto(fn) { if (document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
 
   pronto(function () {
-    // formulário do GHL: carrega com o ?material= do kit e os UTMs da visita (o form_embed.js vem depois, também defer)
-    document.querySelectorAll('iframe[data-form-id][data-src]').forEach(function (f) {
-      var u = new URL(f.getAttribute('data-src'));
-      if (tem) Object.keys(veio).forEach(function (k) { u.searchParams.set(k, veio[k]); });
-      f.src = u.toString();
-    });
-
     if (tem) {
       document.querySelectorAll('a[data-trial]').forEach(function (a) {
         var u = new URL(a.href);
