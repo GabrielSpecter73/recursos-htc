@@ -133,7 +133,11 @@ h3 { font-size: 20px; line-height: 1.2; letter-spacing: -.02em; }
 @media (min-width: 720px) { .cadastro { padding: 36px 40px; } }
 .cadastro > h2 + p { color: var(--suave); margin: -8px 0 20px; }
 /* o form do GHL já vem nas cores do HTC (CSS personalizado no GHL, cópia em 16-materiais/form_htc.css) */
-.form-ghl { background: transparent; border-radius: 16px; overflow: hidden; margin: 0 -1px; }
+.form-ghl { background: transparent; border-radius: 16px; overflow: hidden; margin: 0 -1px; position: relative; min-height: 400px; }
+/* o form_embed do GHL esconde o iframe uns 4 a 6 s até carregar: o espaço fica com o aviso, que some por baixo do form */
+.form-ghl::before { content: "Carregando o formulário…"; position: absolute; inset: 0; display: grid; place-items: center;
+  font: 400 14px/1.4 var(--corpo); color: var(--apagado); }
+.form-ghl .ep-wrapper, .form-ghl iframe { position: relative; z-index: 1; }
 .form-ghl iframe { display: block; width: 100%; border: 0; color-scheme: normal; }
 /* color-scheme: o site é dark e a página do form do GHL é normal; se não baterem, o Chrome pinta um fundo branco atrás do
    iframe, que aparecia nos cantos arredondados do formulário (18/11/2026) */
