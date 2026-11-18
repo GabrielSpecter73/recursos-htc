@@ -134,7 +134,9 @@ h3 { font-size: 20px; line-height: 1.2; letter-spacing: -.02em; }
 .cadastro > h2 + p { color: var(--suave); margin: -8px 0 20px; }
 /* o form do GHL já vem nas cores do HTC (CSS personalizado no GHL, cópia em 16-materiais/form_htc.css) */
 .form-ghl { background: transparent; border-radius: 16px; overflow: hidden; margin: 0 -1px; }
-.form-ghl iframe { display: block; width: 100%; border: 0; }
+.form-ghl iframe { display: block; width: 100%; border: 0; color-scheme: normal; }
+/* color-scheme: o site é dark e a página do form do GHL é normal; se não baterem, o Chrome pinta um fundo branco atrás do
+   iframe, que aparecia nos cantos arredondados do formulário (18/11/2026) */
 .form-falso { display: grid; gap: 14px; }
 .form-falso label { display: grid; gap: 6px; font: 500 13px/1.2 var(--corpo); color: var(--suave); }
 .form-falso input { width: 100%; font: 400 16px/1.2 var(--corpo); color: var(--texto); background: var(--sup); border: 1px solid var(--linha-forte); border-radius: 12px; padding: 14px 14px; }
