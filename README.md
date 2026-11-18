@@ -19,7 +19,7 @@ Esta pasta só recebe kit aprovado/no_ar. Kit novo: criar `16-materiais/<slug>/r
 pronto). Kit com `"acesso": "aberto"` (ele disse no vídeo que não precisa de e-mail) mostra o kit inteiro na página,
 sem formulário.
 
-## Como foi publicado
+## Como foi publicado (18/11/2026: GitHub Pages)
 
 1. Repositório no GitHub e push.
 2. Escolher um dos dois:
@@ -30,15 +30,12 @@ sem formulário.
    - valor `<usuario>.github.io` (GitHub Pages) ou `cname.vercel-dns.com` (Vercel)
 4. Esperar o certificado HTTPS sair e abrir https://recursos.htclube.com.
 
-## Antes de ir pro ar
+## No GHL (feito em 18/11/2026)
 
-- Cada kit já tem o form do GHL "Material grátis" (`6o6xbaWZyhLuDJ2fn6XQ`) embutido, com `?material=<slug>`.
-- Depois do site no ar, no GHL (com o ok dele):
-  - form "Material grátis", Ao enviar → Abrir URL:
-    `https://recursos.htclube.com/{{contact.material}}/acesso/?nome={{contact.first_name}}`
-  - automação "Entrega de material": o link do e-mail sai de `lp.htclube.com/{{contact.material}}-entrega`
-    e vira `https://recursos.htclube.com/{{contact.material}}/acesso/`.
-  Antes disso o form ainda leva pra entrega antiga no `lp.htclube.com`.
+- Cada kit com cadastro tem o form "Material grátis" (`6o6xbaWZyhLuDJ2fn6XQ`) embutido, com `?material=<slug>`.
+- O form, ao enviar, vai pra `https://recursos.htclube.com/{{contact.material}}/acesso/?nome={{contact.first_name}}`.
+- A automação "Entrega de material" manda por e-mail `https://recursos.htclube.com/{{contact.material}}/acesso/`.
+- Kit aberto (`"acesso": "aberto"`) não tem form: o kit inteiro fica na página.
 
 ## Links
 
