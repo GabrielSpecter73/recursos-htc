@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Sora:wght@300..700&display=swap">
-<link rel="stylesheet" href="assets/estilo.css?v=49acc3bb">
-<script src="assets/site.js?v=49acc3bb" defer></script>
+<link rel="stylesheet" href="assets/estilo.css?v=c215c540">
+<script src="assets/site.js?v=c215c540" defer></script>
 </head>
 <body>
 <header class="topo"><div class="wrap topo-in">
@@ -29,6 +29,14 @@
 <p class="eyebrow">RECURSOS GRÁTIS</p>
 <h1>Tudo que eu mostro nos vídeos, <span class="am">de graça</span></h1>
 <p class="sub">Prompts, scripts e passo a passo dos vídeos do canal O Almanaque de Gåbriel Oliveira. Escolha o kit e use hoje.</p>
+<form class="busca" data-busca role="search" action="./" method="get">
+<label class="sr" for="q">Procurar o kit</label>
+<input id="q" name="q" type="search" autocomplete="off" enterkeyhint="search"
+  placeholder="Cole o link do Reels ou do vídeo, ou digite a palavra (ex.: GROK)">
+<button class="btn btn-g" type="submit">Achar o kit</button>
+</form>
+<p class="busca-dica">Viu um Reels, um vídeo no YouTube ou um "comenta GROK"? Cola o link ou a palavra aqui que eu te mostro o kit certo.</p>
+<div class="resultado" data-resultado aria-live="polite"></div>
 </div></section>
 <section class="lista"><div class="wrap">
 <div class="filtros" role="group" aria-label="Filtrar por tema"><button class="chip" type="button" data-filtro="todos" aria-pressed="true">Todos</button><button class="chip" type="button" data-filtro="IA" aria-pressed="false">IA</button><button class="chip" type="button" data-filtro="Prospecção" aria-pressed="false">Prospecção</button><button class="chip" type="button" data-filtro="Sites" aria-pressed="false">Sites</button></div>
